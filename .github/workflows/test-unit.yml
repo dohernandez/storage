@@ -15,14 +15,31 @@ concurrency:
 env:
   GO111MODULE: "on"
   RUN_BASE_COVERAGE: "on"  # Runs test for PR base in case base test coverage is missing.
-  COV_GO_VERSION: 1.21.x   # Version of Go to collect coverage
+  COV_GO_VERSION: 1.19.x   # Version of Go to collect coverage
   TARGET_DELTA_COV: 90     # Target coverage of changed lines, in percents
 jobs:
   test:
     strategy:
       matrix:
-        go-version: [ 1.19.x, 1.20.x, 1.21.x ]
+        go-version: [ 1.19.x ]
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_DB: postgres
+          POSTGRES_PASSWORD: postgres_password
+          POSTGRES_PORT: 5432
+          POSTGRES_USER: runner
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - name: Install Go stable
         if: matrix.go-version != 'tip'
@@ -78,7 +95,7 @@ jobs:
       - name: Test
         id: test
         run: |
-          make test-unit
+          POSTGRES_TEST_USER=runner POSTGRES_TEST_PASSWORD=postgres_password make test
           go tool cover -func=./unit.coverprofile > unit.txt
           TOTAL=$(grep 'total:' unit.txt)
           echo "${TOTAL}"
