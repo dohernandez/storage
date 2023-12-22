@@ -31,18 +31,20 @@ endif
 -include $(EXTEND_DEVGO_PATH)/makefiles/recipe.mk
 
 # Start extra recipes here.
--include $(DEVGO_PATH)/makefiles/lint.mk
--include $(DEVGO_PATH)/makefiles/test-unit.mk
--include $(EXTEND_DEVGO_PATH)/makefiles/check.mk
--include $(EXTEND_DEVGO_PATH)/makefiles/pg.mk
--include $(DEVGO_PATH)/makefiles/github-actions.mk
+-include $(PLUGIN_BOOL64DEV_MAKEFILES_PATH)/test-unit.mk
+-include $(PLUGIN_BOOL64DEV_MAKEFILES_PATH)/lint.mk
+-include $(PLUGIN_STORAGE_MAKEFILES_PATH)/pg.mk
 # End extra recipes here.
-
-.PHONY: test
 
 # DO NOT EDIT ANYTHING BELOW THIS LINE.
 
 # Add your custom targets here.
 
+.PHONY: test check
+
+
 ## Run tests
-test: pg-ready test-unit
+test: test-unit
+
+## Run checks (pg-isready lint, test)
+check: pg-ready lint test

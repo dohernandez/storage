@@ -1,4 +1,3 @@
-// Package storage Database package.
 package storage
 
 import (
