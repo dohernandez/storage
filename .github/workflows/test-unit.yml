@@ -16,6 +16,8 @@ env:
   RUN_BASE_COVERAGE: "on"  # Runs test for PR base in case base test coverage is missing.
   COV_GO_VERSION: 1.19.x   # Version of Go to collect coverage
   TARGET_DELTA_COV: 90     # Target coverage of changed lines, in percents
+  POSTGRES_TEST_USER: runner
+  POSTGRES_TEST_PASSWORD: postgres_password
 jobs:
   test:
     strategy:
@@ -28,9 +30,9 @@ jobs:
         image: postgres:latest
         env:
           POSTGRES_DB: postgres
-          POSTGRES_PASSWORD: postgres_password
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_TEST_PASSWORD }}
           POSTGRES_PORT: 5432
-          POSTGRES_USER: runner
+          POSTGRES_USER: ${{ env.POSTGRES_TEST_USER }}
         ports:
           - 5432:5432
         options: >-
@@ -90,15 +92,21 @@ jobs:
           git reset --hard ${{ github.event.pull_request.base.sha }}
           (make test-unit && go tool cover -func=./unit.coverprofile > unit-base.txt) || echo "No test-unit in base"
           git reset --hard $HEAD
+        env:
+          POSTGRES_TEST_USER: ${{ env.POSTGRES_TEST_USER }}
+          POSTGRES_TEST_PASSWORD: ${{ env.POSTGRES_TEST_PASSWORD }}
 
       - name: Test
         id: test
         run: |
-          POSTGRES_TEST_USER=runner POSTGRES_TEST_PASSWORD=postgres_password make test
+          make test-unit
           go tool cover -func=./unit.coverprofile > unit.txt
           TOTAL=$(grep 'total:' unit.txt)
           echo "${TOTAL}"
           echo "total=$TOTAL" >> $GITHUB_OUTPUT
+        env:
+          POSTGRES_TEST_USER: ${{ env.POSTGRES_TEST_USER }}
+          POSTGRES_TEST_PASSWORD: ${{ env.POSTGRES_TEST_PASSWORD }}
 
       - name: Annotate missing test coverage
         id: annotate
@@ -122,7 +130,7 @@ jobs:
         if: matrix.go-version == env.COV_GO_VERSION && github.event.pull_request.base.sha != ''
         uses: marocchino/sticky-pull-request-comment@v2
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
           header: unit-test
           message: |
             ### Unit Test Coverage
