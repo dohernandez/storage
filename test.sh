@@ -67,7 +67,7 @@ yq e ".jobs.test.services.postgres.env.POSTGRES_PASSWORD = \"\${{ env.POSTGRES_T
 yq e ".jobs.test.services.postgres.env.POSTGRES_PORT = \"5432\"" -i $workflow_path
 yq e ".jobs.test.services.postgres.env.POSTGRES_USER = \"\${{ env.POSTGRES_TEST_USER }}\"" -i $workflow_path
 yq e ".jobs.test.services.postgres.ports[0] = \"5432:5432\"" -i $workflow_path
-yq e ".jobs.test.services.postgres.options = \" --health-cmd pg_isready\\n --health-interval 10s\\n --health-timeout 5s\\n --health-retries 5\"" -i $workflow_path
+yq e ".jobs.test.services.postgres.options = \"--health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5\"" -i $workflow_path
 
 
 # Add the environment variables to the jobs
