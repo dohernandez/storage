@@ -16,31 +16,12 @@ env:
   RUN_BASE_COVERAGE: "on"  # Runs test for PR base in case base test coverage is missing.
   COV_GO_VERSION: 1.19.x   # Version of Go to collect coverage
   TARGET_DELTA_COV: 90     # Target coverage of changed lines, in percents
-  POSTGRES_TEST_USER: runner
-  POSTGRES_TEST_PASSWORD: postgres_password
 jobs:
   test:
     strategy:
       matrix:
         go-version: [ 1.19.x ]
     runs-on: ubuntu-latest
-
-    services:
-      postgres:
-        image: postgres:latest
-        env:
-          POSTGRES_DB: postgres
-          POSTGRES_PASSWORD: ${{ env.POSTGRES_TEST_PASSWORD }}
-          POSTGRES_PORT: 5432
-          POSTGRES_USER: ${{ env.POSTGRES_TEST_USER }}
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
     steps:
       - name: Install Go stable
         if: matrix.go-version != 'tip'
@@ -92,9 +73,6 @@ jobs:
           git reset --hard ${{ github.event.pull_request.base.sha }}
           (make test-unit && go tool cover -func=./unit.coverprofile > unit-base.txt) || echo "No test-unit in base"
           git reset --hard $HEAD
-        env:
-          POSTGRES_TEST_USER: ${{ env.POSTGRES_TEST_USER }}
-          POSTGRES_TEST_PASSWORD: ${{ env.POSTGRES_TEST_PASSWORD }}
 
       - name: Test
         id: test
@@ -104,9 +82,6 @@ jobs:
           TOTAL=$(grep 'total:' unit.txt)
           echo "${TOTAL}"
           echo "total=$TOTAL" >> $GITHUB_OUTPUT
-        env:
-          POSTGRES_TEST_USER: ${{ env.POSTGRES_TEST_USER }}
-          POSTGRES_TEST_PASSWORD: ${{ env.POSTGRES_TEST_PASSWORD }}
 
       - name: Annotate missing test coverage
         id: annotate
