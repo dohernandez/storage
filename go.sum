@@ -24,6 +24,12 @@ github.com/dohernandez/dev v0.3.7 h1:1vXn0Xmdfd+RzjWcWGauR47oIiWH3Lr/3eGAicQ5RUo
 github.com/dohernandez/dev v0.3.7/go.mod h1:EXsB60WJXSoNkx/LVEe8NAUYMbQ8qmDQ6xwkR/5rixY=
 github.com/dohernandez/dev v0.3.8 h1:8gzlwWyydVhccf5fNvvCh2gw8ZELGD+HSGxr2vvqVLU=
 github.com/dohernandez/dev v0.3.8/go.mod h1:EXsB60WJXSoNkx/LVEe8NAUYMbQ8qmDQ6xwkR/5rixY=
+github.com/dohernandez/dev v0.4.0 h1:ZAqghH0YG1evC/CGMWGrXpMEJDahdl6FZl2BezKQYc8=
+github.com/dohernandez/dev v0.4.0/go.mod h1:EXsB60WJXSoNkx/LVEe8NAUYMbQ8qmDQ6xwkR/5rixY=
+github.com/dohernandez/dev v0.5.0 h1:psVNfcv1DQnqKgTfso+MY2MZRR01OPKi6iNHMFolZ24=
+github.com/dohernandez/dev v0.5.0/go.mod h1:EXsB60WJXSoNkx/LVEe8NAUYMbQ8qmDQ6xwkR/5rixY=
+github.com/dohernandez/dev v0.5.1 h1:jH2jsIGFwZD+vWMeEMrWC1R62przby0kWysmk86w9RQ=
+github.com/dohernandez/dev v0.5.1/go.mod h1:EXsB60WJXSoNkx/LVEe8NAUYMbQ8qmDQ6xwkR/5rixY=
 github.com/google/uuid v1.5.0 h1:1p67kYwdtXjb0gL0BPiP1Av9wiZPo5A8z2cWkTZ+eyU=
 github.com/google/uuid v1.5.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/jackc/pgerrcode v0.0.0-20220416144525-469b46aa5efa h1:s+4MhCQ6YrzisK6hFJUX53drDT4UsSW3DEhKn0ifuHw=
