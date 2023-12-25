@@ -35,17 +35,11 @@ endif
 -include $(PLUGIN_BOOL64DEV_MAKEFILES_PATH)/lint.mk
 -include $(PLUGIN_STORAGE_MAKEFILES_PATH)/pg.mk
 -include $(PLUGIN_STORAGE_MAKEFILES_PATH)/github-actions.mk
+-include $(PLUGIN_STORAGE_MAKEFILES_PATH)/check.mk
 # End extra recipes here.
 
 # DO NOT EDIT ANYTHING BELOW THIS LINE.
 
 # Add your custom targets here.
 
-.PHONY: test check
-
-
-## Run tests
-test: test-unit
-
-## Run checks (pg-isready lint, test)
-check: pg-ready lint test
+.PHONY:
