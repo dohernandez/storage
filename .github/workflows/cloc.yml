@@ -1,4 +1,4 @@
-# This script is provided by github.com/bool64/dev.
+# This code is provided by github.com/dohernandez/dev.
 name: cloc
 on:
   pull_request:

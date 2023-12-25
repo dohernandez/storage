@@ -1,4 +1,4 @@
-# This script is provided by github.com/bool64/dev.
+# This code is provided by github.com/dohernandez/dev.
 name: test-unit
 on:
   push:
@@ -121,14 +121,14 @@ jobs:
 
             </details>
       - name: Store base coverage
-        if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/main' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: cp unit.txt unit-base.txt
       - name: Upload code coverage
         if: matrix.go-version == env.COV_GO_VERSION
         uses: codecov/codecov-action@v1
         with:
           file: ./unit.coverprofile
-          flags: unittestsmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+          flags: unittests
     services:
       postgres:
         image: postgres:latest
