@@ -1,5 +1,7 @@
 github.com/bool64/dev v0.2.32 h1:DRZtloaoH1Igky3zphaUHV9+SLIV2H3lsf78JsJHFg0=
 github.com/bool64/dev v0.2.32/go.mod h1:iJbh1y/HkunEPhgebWRNcs8wfGq7sjvJ6W5iabL8ACg=
+github.com/bool64/dev v0.2.33 h1:ETAcSa8H9w4talcCdSQCCnLX7PMHmuxdLcDl6TpSDj4=
+github.com/bool64/dev v0.2.33/go.mod h1:iJbh1y/HkunEPhgebWRNcs8wfGq7sjvJ6W5iabL8ACg=
 github.com/cenkalti/backoff/v4 v4.2.1 h1:y4OZtCnogmCPw98Zjyt5a6+QwPLGkiQsYW5oUqylYbM=
 github.com/cenkalti/backoff/v4 v4.2.1/go.mod h1:Y3VNntkOUPxTVeUxJ/G5vcM//AlwfmyYozVcomhLiZE=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
@@ -32,6 +34,14 @@ github.com/dohernandez/dev v0.5.1 h1:jH2jsIGFwZD+vWMeEMrWC1R62przby0kWysmk86w9RQ
 github.com/dohernandez/dev v0.5.1/go.mod h1:EXsB60WJXSoNkx/LVEe8NAUYMbQ8qmDQ6xwkR/5rixY=
 github.com/dohernandez/dev v0.6.0 h1:JQJLk0X1CeQdZPsglRERdnwIL3dlOzT50CJPGG9GjZQ=
 github.com/dohernandez/dev v0.6.0/go.mod h1:EXsB60WJXSoNkx/LVEe8NAUYMbQ8qmDQ6xwkR/5rixY=
+github.com/dohernandez/dev v0.6.9 h1:njgu1iFaq1E7RUlMghbUdiVwRhu/PHUcSQUCQMXTU7E=
+github.com/dohernandez/dev v0.6.9/go.mod h1:wD9owTM9rveq54KvgDhoP8G5ntMf/XdbI/xonKbLWkY=
+github.com/dohernandez/dev v0.7.0 h1:RIWKNml+lSZuvTT3UQ84RDAWrUzSpX+lIZyV9eMLZPQ=
+github.com/dohernandez/dev v0.7.0/go.mod h1:wD9owTM9rveq54KvgDhoP8G5ntMf/XdbI/xonKbLWkY=
+github.com/dohernandez/dev v0.7.1 h1:QM31TevX+hyDWL9QvFtA83bdileJ5kkmFvqFh4tr/2s=
+github.com/dohernandez/dev v0.7.1/go.mod h1:wD9owTM9rveq54KvgDhoP8G5ntMf/XdbI/xonKbLWkY=
+github.com/dohernandez/dev v0.7.2 h1:UqJCUu/5SjzaeNkgyGaB/hBW13YR8/x+7AGYUCQn73o=
+github.com/dohernandez/dev v0.7.2/go.mod h1:wD9owTM9rveq54KvgDhoP8G5ntMf/XdbI/xonKbLWkY=
 github.com/google/uuid v1.5.0 h1:1p67kYwdtXjb0gL0BPiP1Av9wiZPo5A8z2cWkTZ+eyU=
 github.com/google/uuid v1.5.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/jackc/pgerrcode v0.0.0-20220416144525-469b46aa5efa h1:s+4MhCQ6YrzisK6hFJUX53drDT4UsSW3DEhKn0ifuHw=
