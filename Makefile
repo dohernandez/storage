@@ -26,11 +26,11 @@ endif
 -include $(EXTEND_DEVGO_PATH)/makefiles/recipe.mk
 
 # Start extra recipes here.
--include $(PLUGIN_BOOL64DEV_MAKEFILES_PATH)/test-unit.mk
 -include $(PLUGIN_BOOL64DEV_MAKEFILES_PATH)/lint.mk
--include $(PLUGIN_STORAGE_MAKEFILES_PATH)/pg.mk
--include $(PLUGIN_STORAGE_MAKEFILES_PATH)/github-actions.mk
--include $(PLUGIN_STORAGE_MAKEFILES_PATH)/check.mk
+-include $(PLUGIN_BOOL64DEV_MAKEFILES_PATH)/test-unit.mk
+-include $(PLUGIN_LOCAL_MAKEFILES_PATH)/check.mk
+-include $(PLUGIN_LOCAL_MAKEFILES_PATH)/pg.mk
+-include $(PLUGIN_LOCAL_MAKEFILES_PATH)/github-actions.mk
 # End extra recipes here.
 
 # DO NOT EDIT ANYTHING BELOW THIS LINE.
