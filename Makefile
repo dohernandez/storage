@@ -4,12 +4,7 @@
 GO ?= go
 export GO111MODULE = on
 
-ifneq "$(GOFLAGS)" ""
-  $(info GOFLAGS: ${GOFLAGS})
-endif
-
 ifneq "$(wildcard ./vendor )" ""
-  $(info Using vendor)
   modVendor =  -mod=vendor
   ifeq (,$(findstring -mod,$(GOFLAGS)))
       export GOFLAGS := ${GOFLAGS} ${modVendor}

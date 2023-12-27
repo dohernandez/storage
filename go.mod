@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/cenkalti/backoff/v4 v4.2.1
-	github.com/dohernandez/dev v0.6.0
+	github.com/dohernandez/dev v0.7.2
 	github.com/google/uuid v1.5.0
 	github.com/jackc/pgerrcode v0.0.0-20220416144525-469b46aa5efa
 	github.com/jackc/pgx/v5 v5.5.1
@@ -13,7 +13,7 @@ require (
 )
 
 require (
-	github.com/bool64/dev v0.2.32 // indirect
+	github.com/bool64/dev v0.2.33 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20231201235250-de7065d80cb9 // indirect
