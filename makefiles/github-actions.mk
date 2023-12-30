@@ -3,7 +3,7 @@
 GO ?= go
 
 #- Placeholders require include the file in the Makefile
-#- require - bool64/dev/github-actions
+#- require - dev/github-actions
 
 ## Inject/Replace GitHub Actions test db service
 github-actions-test-db:
