@@ -2,14 +2,12 @@
 
 GO ?= go
 
-#- dev/github-actions => EXTEND_DEVGO_PATH/makefiles/github-actions.mk
-#- Placeholders source only check that the file exists
-#- source a dev/github-actions
+#- Placeholders require include the file in the Makefile
+#- require - bool64/dev/github-actions
 
-## Create/Replace GitHub Actions from template
-github-actions:
-	@make -f $(EXTEND_DEVGO_PATH)/makefiles/github-actions.mk $@
+## Inject/Replace GitHub Actions test db service
+github-actions-test-db:
 	@echo "Updating test-unit.yml"
 	@bash $(STORAGE_DEVGO_SCRIPTS)/github-actions.sh
 
-.PHONY: github-actions
+.PHONY: github-actions-test-db
