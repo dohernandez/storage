@@ -11,4 +11,4 @@ endif
 export MODULE_NAME := $(shell test -f go.mod && GO111MODULE=on $(GO) list $(modVendor) -m)
 
 STORAGE_DEVGO_PATH ?= $(PWD)/vendor/github.com/dohernandez/storage
-STORAGE_DEVGO_SCRIPTS ?= $(DEVGO_PATH)/scripts
+STORAGE_DEVGO_SCRIPTS ?= $(STORAGE_DEVGO_PATH)/scripts
