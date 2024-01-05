@@ -50,6 +50,8 @@ github.com/dohernandez/dev v0.8.1 h1:Gow/5Ms3HO917LuZ2SdfBfK7iT2pot+wta7Q+m56d/A
 github.com/dohernandez/dev v0.8.1/go.mod h1:wD9owTM9rveq54KvgDhoP8G5ntMf/XdbI/xonKbLWkY=
 github.com/dohernandez/dev v0.9.1 h1:FipZaAF/qOhhiX6v2KSLcRywE4jiE+8Zpmd//G06Hu0=
 github.com/dohernandez/dev v0.9.1/go.mod h1:wD9owTM9rveq54KvgDhoP8G5ntMf/XdbI/xonKbLWkY=
+github.com/dohernandez/dev v0.10.2 h1:l9nWNM2i1dBdmB3AbGl+N4FKKqNxvxzsMcQu+cWJiMI=
+github.com/dohernandez/dev v0.10.2/go.mod h1:wD9owTM9rveq54KvgDhoP8G5ntMf/XdbI/xonKbLWkY=
 github.com/google/uuid v1.5.0 h1:1p67kYwdtXjb0gL0BPiP1Av9wiZPo5A8z2cWkTZ+eyU=
 github.com/google/uuid v1.5.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/jackc/pgerrcode v0.0.0-20220416144525-469b46aa5efa h1:s+4MhCQ6YrzisK6hFJUX53drDT4UsSW3DEhKn0ifuHw=

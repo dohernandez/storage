@@ -1,13 +1,11 @@
 #-## Utilities for checking code includes checks postgresql instance ready
 
 #- Placeholders source only check that the file exists
-#- require - bool64/dev/lint
-#- require - bool64/dev/test-unit
+#- require - dev/check
+#- require - self/pg
 
-## Run tests
-test: test-unit
+#- target-group - test
+BEFORE_TEST_TARGETS += pg-ready
 
-## Run checks (pg-isready lint, test)
-check: pg-ready lint test
-
-.PHONY: test check
+#- target-group - check
+BEFORE_CHECK_TARGETS += pg-ready

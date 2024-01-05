@@ -26,9 +26,10 @@ endif
 
 # Start extra recipes here.
 -include $(PLUGIN_BOOL64DEV_MAKEFILES_PATH)/lint.mk
--include $(PLUGIN_BOOL64DEV_MAKEFILES_PATH)/test-unit.mk
--include $(PLUGIN_LOCAL_MAKEFILES_PATH)/check.mk
+-include $(EXTEND_DEVGO_PATH)/makefiles/test.mk
+-include $(EXTEND_DEVGO_PATH)/makefiles/check.mk
 -include $(PLUGIN_LOCAL_MAKEFILES_PATH)/pg.mk
+-include $(PLUGIN_LOCAL_MAKEFILES_PATH)/check.mk
 -include $(PLUGIN_BOOL64DEV_MAKEFILES_PATH)/release-assets.mk
 -include $(EXTEND_DEVGO_PATH)/makefiles/github-actions.mk
 -include $(PLUGIN_LOCAL_MAKEFILES_PATH)/github-actions.mk
