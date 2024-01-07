@@ -1,52 +1,7 @@
 #!/bin/bash
 
-# The name of the workflow file
-#filename=".github/workflows/test-unit.yml"
-#
-## The environment variables to add
-#env_vars="  POSTGRES_TEST_USER: runner\\
-#  POSTGRES_TEST_PASSWORD: postgres_password"
-#
-## Add the environment variables to the file
-#sed -i "" -e "/^env:/a\\
-#$env_vars" $filename
-#
-## The text to add
-#text="    services:\n\
-#      postgres:\n\
-#        image: postgres:latest\n\
-#        env:\n\
-#          POSTGRES_DB: postgres\n\
-#          POSTGRES_PASSWORD: \${{ env.POSTGRES_TEST_PASSWORD }}\n\
-#          POSTGRES_PORT: 5432\n\
-#          POSTGRES_USER: \${{ env.POSTGRES_TEST_USER }}\n\
-#        ports:\n\
-#          - 5432:5432\n\
-#        options: >-\n\
-#          --health-cmd pg_isready\n\
-#          --health-interval 10s\n\
-#          --health-timeout 5s\n\
-#          --health-retries 5"
-#
-## Add the text to the file before the first 'steps' line
-#awk -v text="$text" '/steps:/ {print text} {print}' $filename > $filename.tmp && mv $filename.tmp $filename
-
-# The name of the step to add the environment variables to
-#step_name="Test"
-#
-## The environment variables to add
-#env_vars=("POSTGRES_TEST_USER" "POSTGRES_TEST_PASSWORD")
-#
-## Loop over the environment variables
-#for env_var in "${env_vars[@]}"; do
-#    # Use yq to add the environment variable to the step
-#    yq e ".jobs.*.steps[] |= (select(.name == \"$step_name\") .env.$env_var = \"\${{ env.$env_var }}\")" -i $filename
-#done
-
-
-
 # The path to the workflow file
-workflow_path=".github/workflows/test-unit.yml"
+workflow_path=".github/workflows/test.yml"
 
 # The names of the jobs to add the environment variables to
 job_names=("Test" "Run test for base code")
