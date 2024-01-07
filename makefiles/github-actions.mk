@@ -9,7 +9,7 @@ AFTER_GITHUB_ACTIONS_TARGETS += github-actions-test-db
 
 ## Inject/Replace GitHub Actions test db service
 github-actions-test-db:
-	@echo "Updating test-unit.yml"
+	@echo "Updating test.yml"
 	@bash $(STORAGE_DEVGO_SCRIPTS)/github-actions.sh
 
 .PHONY: github-actions-test-db
