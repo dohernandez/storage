@@ -2,13 +2,13 @@ GO ?= go
 
 PWD = $(shell pwd)
 
-# Detecting GOPATH and removing trailing "/" if any
-GOPATH = $(realpath $(shell $(GO) env GOPATH))
-
-ifneq "$(wildcard ./vendor )" ""
-  modVendor = -mod=vendor
+# Checking vendor path using plugin variable: PLUGIN_DOHERNANDEZSTORAGE_VENDOR_PATH
+ifeq ($(PLUGIN_DOHERNANDEZSTORAGE_VENDOR_PATH),)
+	STORAGE_DEVGO_PATH = $(PLUGIN_DOHERNANDEZSTORAGE_VENDOR_PATH)
 endif
-export MODULE_NAME := $(shell test -f go.mod && GO111MODULE=on $(GO) list $(modVendor) -m)
 
-STORAGE_DEVGO_PATH ?= $(PWD)/vendor/github.com/dohernandez/storage
+ifeq ($(STORAGE_DEVGO_PATH),)
+	STORAGE_DEVGO_PATH = $(PWD)
+endif
+
 STORAGE_DEVGO_SCRIPTS ?= $(STORAGE_DEVGO_PATH)/makefiles

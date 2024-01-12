@@ -1,4 +1,4 @@
 plugins:
   - name: local
     makefiles_path: makefiles
-    main: ../internal/makefiles/main.mk
+    main: main.mk
