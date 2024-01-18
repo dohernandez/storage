@@ -6,8 +6,8 @@ github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ3
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/dohernandez/dev v0.14.4 h1:KESbtDBWXc69J2noS9MLlJwhCu4FEVd3u/WqcScItoc=
-github.com/dohernandez/dev v0.14.4/go.mod h1:wD9owTM9rveq54KvgDhoP8G5ntMf/XdbI/xonKbLWkY=
+github.com/dohernandez/dev v0.16.0 h1:mrJ7C81FH+ogAas/3ozU6d/o+lyTBKpmVPwGVglP4ok=
+github.com/dohernandez/dev v0.16.0/go.mod h1:wD9owTM9rveq54KvgDhoP8G5ntMf/XdbI/xonKbLWkY=
 github.com/google/uuid v1.5.0 h1:1p67kYwdtXjb0gL0BPiP1Av9wiZPo5A8z2cWkTZ+eyU=
 github.com/google/uuid v1.5.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/jackc/pgerrcode v0.0.0-20220416144525-469b46aa5efa h1:s+4MhCQ6YrzisK6hFJUX53drDT4UsSW3DEhKn0ifuHw=
